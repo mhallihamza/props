@@ -1,23 +1,13 @@
-import logo from './logo.svg';
 import './App.css';
-
+import Compenent from './profile/compenent.js';
+import image from './images/1.jpg'
 function App() {
+   const handleName = (name) => {
+     alert(`Hello ${name}`);
+   };
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+       <Compenent fullName="Hamza Mhalli" bio="B" profession="Engineer" handleName={handleName}>{image}</Compenent>
     </div>
   );
 }
